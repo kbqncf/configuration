@@ -1,3 +1,6 @@
+- Role: server_utils
+  - Install "vim", not "vim-tiny".
+
 - Role: notifier
   - Added notifier back to continuous integration.
 
