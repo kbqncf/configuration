@@ -14,11 +14,11 @@
 
 - name: create OAuth application clients
   shell: >
-    {{ veda_web_frontend_venv_dir }}/bin/python {{ COMMON_BIN_DIR }}/manage.{{ veda_web_frontend_service_name }} create_oauth_app_client --settings={{ VEDA_WEB_FRONTEND_DJANGO_SETTINGS_MODULE }}
+    {{ veda_web_frontend_venv_dir }}/bin/python {{ COMMON_BIN_DIR }}/manage.{{ veda_web_frontend_service_name }} create_oauth_client --settings={{ VEDA_WEB_FRONTEND_DJANGO_SETTINGS_MODULE }}
     {{ VIDEO_PIPELINE_BASE_OAUTH_CLIENT_ID }}
     confidential
     client-credentials
-    --name {{ VIDEO_PIPELINE_BASE_OAUTH_CLIENT_NAME }}
+    --client_name {{ VIDEO_PIPELINE_BASE_OAUTH_CLIENT_NAME }}
     --client_secret {{ VIDEO_PIPELINE_BASE_OAUTH_CLIENT_SECRET }}
     --redirect_uris {{ VIDEO_PIPELINE_BASE_OAUTH_TOKEN_URL }}
     --skip_authorization
