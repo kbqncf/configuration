@@ -101,9 +101,6 @@ VIDEO_PIPELINE_BASE_CONFIG:
 
   SECRET_KEY: "{{ VIDEO_PIPELINE_BASE_SECRET_KEY }}"
 
-  # Django DEBUG global
-  debug: false
-
   # django staticfile settings
   STATIC_ROOT_PATH: "{{ COMMON_DATA_DIR }}/{{ video_pipeline_base_service_name }}/staticfiles"
 
